@@ -9,6 +9,10 @@
 	font-size: .85rem;
 }
 
+.debug {
+	border: 1px solid red;
+}
+
 .font-mukta {
 	font-family: 'Mukta', sans-serif;
 }
@@ -19,10 +23,6 @@
 
 ul {
 	list-style: none;
-
-	li {
-		border: 1px solid red;
-	}
 }
 
 a {
@@ -43,5 +43,32 @@ header {
 	a {
 		color: rgb(46, 46, 46);
 		font-weight: 600;
+	}
+}
+
+//footer
+footer {
+	#main-footer {
+		height: 310px;
+		background-image: url('../../public/images/footer-bg.jpg');
+		background-size: cover;
+
+		small {
+			color: $grey;
+		}
+
+		#lists {
+			height: 85%;
+
+			h5 {
+				color: white;
+				font-weight: 600;
+			}
+
+			li {
+				line-height: 1rem;
+			}
+
+		}
 	}
 }
