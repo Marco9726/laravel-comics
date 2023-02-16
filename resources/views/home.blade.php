@@ -12,6 +12,10 @@
 
 <body>
 	@include('components.header')
+	<main>
+		<div id="jumbotron">		
+		</div>
+	</main>
 	@include('components.footer')
 
 </body>

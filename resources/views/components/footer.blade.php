@@ -5,9 +5,11 @@
 				<div class="col-6 h-100">
 
 					<div id="lists" class="d-flex flex-column flex-wrap debug pt-2">
+						{{-- foreach per ciclare le 4 liste dell'array associativo 'footerLists' --}}
 						@foreach ($footerLists as $key => $item)
 							<h5 class="font-pt mb-2 w-25">{{ $key }}</h5>
 							<ul class="p-0 w-25">
+								{{-- foreach per ciclare i vari elementi delle 4 liste  --}}
 								@foreach ($item as $li)
 								<li>
 									<small>{{$li}}</small>
@@ -21,7 +23,10 @@
 						<a href="#">Cookies Settings</a></small>
 					</div>
 				</div>
-				<div class="col-6"></div>
+
+				<div class="col-6">
+					<h1>LOGO</h1>
+				</div>
 			</div>
 		</div>
 	</div>
