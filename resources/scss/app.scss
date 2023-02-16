@@ -8,8 +8,21 @@
 	box-sizing: border-box;
 }
 
+.font-mukta {
+	font-family: 'Mukta', sans-serif;
+}
+
+.font-pt {
+	font-family: 'PT Sans Narrow', sans-serif;
+}
+
 ul {
 	list-style: none;
+}
+
+.container-w60 {
+	width: 60%;
+	margin: 0 auto;
 }
 
 //header

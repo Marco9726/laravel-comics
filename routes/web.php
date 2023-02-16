@@ -12,7 +12,19 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//HOME
 Route::get('/', function () {
-	return view('home');
+	$headerMenu = [
+		'CHARACTERS' => '/characters',
+		'COMICS' => '/comics',
+		'MOVIE' => '/movies',
+		'TV' => '/TV',
+		'GAMES' => '/games',
+		'COLLECTIBLES' => '/collectibles',
+		'VIDEOS' => '/videos',
+		'FANS' => '/fans',
+		'NEWS' => '/news',
+		'SHOP' => '/shop'
+	];
+	return view('home', compact('headerMenu'));
 });
