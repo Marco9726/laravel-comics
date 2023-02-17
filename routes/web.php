@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 //HOME
 Route::get('/', function () {
+	$comics = config('comics');
+
 	$headerMenu = [
 		'CHARACTERS' => '/characters',
 		'COMICS' => '/comics',
@@ -63,5 +65,5 @@ Route::get('/', function () {
 		]
 
 	];
-	return view('comics', compact('headerMenu', 'footerLists'));
+	return view('comics', compact('headerMenu', 'footerLists', 'comics'));
 })->name('COMICS');

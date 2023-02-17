@@ -1,0 +1,22 @@
+@import '../partials/variables';
+
+footer {
+	#main-footer {
+		height: 310px;
+		background-image: url('../../public/images/footer-bg.jpg');
+		background-size: cover;
+
+		small {
+			color: $grey;
+		}
+
+		#lists {
+			height: 85%;
+
+			li {
+				line-height: 1rem;
+			}
+
+		}
+	}
+}

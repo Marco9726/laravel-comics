@@ -13,11 +13,23 @@
 <body>
 	@include('components.header')
 	<main>
-		<div id="jumbotron">		
-		</div>
+		@include('components.jumbotron')
 		<div id="content" class="pb-2">
-			<div class="container-w60 p-2">
-				<h3 class="font-pt bg-my-primary text-center p-2 d-inline-block py-1 px-4">CURRENT SERIES</h3>
+			<div class="container-w60">
+				<h3 class="font-pt bg-my-primary text-center d-inline-block px-4">CURRENT SERIES</h3>
+				<div class="row justify-content-between flex-wrap">
+				@foreach ($comics as $comic)
+					<div class="comic-card mb-4">
+						<div class="comic-img mb-3">
+							<a href="#">
+								<img class="img-fluid" src="{{ $comic['thumb'] }}" alt="{{ $comic['thumb'] }}">
+							</a>
+						</div>
+						<a href="#" class="text-white">{{ Str::upper( $comic['series']) }}</a>
+					</div>
+				@endforeach
+
+				</div>
 			</div>
 		</div>
 	</main>
