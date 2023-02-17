@@ -63,5 +63,5 @@ Route::get('/', function () {
 		]
 
 	];
-	return view('home', compact('headerMenu', 'footerLists'));
-});
+	return view('comics', compact('headerMenu', 'footerLists'));
+})->name('COMICS');

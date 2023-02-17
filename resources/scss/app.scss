@@ -1,3 +1,4 @@
+@use './components/header' as *;
 @import '~bootstrap/scss/bootstrap';
 @import './partials/variables';
 
@@ -21,6 +22,16 @@
 	font-family: 'PT Sans Narrow', sans-serif;
 }
 
+.bg-my-primary {
+	background-color: $brand-primary;
+}
+
+h5,
+h3 {
+	font-weight: 600;
+	color: white;
+}
+
 ul {
 	list-style: none;
 }
@@ -34,15 +45,17 @@ a {
 	margin: 0 auto;
 }
 
-//header
-header {
-	#top-bar {
-		background-color: $brand-primary;
+
+//main
+main {
+	#jumbotron {
+		height: 310px;
+		background-image: url('../../public/images/jumbotron.jpg');
+		background-size: cover;
 	}
 
-	a {
-		color: rgb(46, 46, 46);
-		font-weight: 600;
+	#content {
+		background-color: rgb(28, 28, 28);
 	}
 }
 
@@ -59,11 +72,6 @@ footer {
 
 		#lists {
 			height: 85%;
-
-			h5 {
-				color: white;
-				font-weight: 600;
-			}
 
 			li {
 				line-height: 1rem;

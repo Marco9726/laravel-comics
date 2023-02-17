@@ -1,0 +1,19 @@
+@use '../partials/variables' as *;
+
+header {
+	a {
+		color: rgb(46, 46, 46);
+		font-weight: 600;
+		display: inline-block;
+		height: 5rem;
+		line-height: 5rem;
+	}
+
+	.active {
+		a {
+			color: $brand-primary;
+			border-bottom: 3px solid $brand-primary;
+		}
+	}
+
+}

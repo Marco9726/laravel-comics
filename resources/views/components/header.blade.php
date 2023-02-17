@@ -1,5 +1,5 @@
 <header>
-	<div id="top-bar">
+	<div id="top-bar" class="bg-my-primary">
 		<div class="container-w60 text-end text-white font-mukta">
 			<small> DC POWER VISA &#174;</small>
 			<small class="ms-5"> ADDITIONAL DC SITES &#x25BE;</small>
@@ -12,12 +12,12 @@
 					<h1>LOGO</h1>
 				</div>
 				<nav class="col">
-					<ul class="d-flex">
+					<ul class="d-flex mb-0">
 						{{-- foreach per ciclare gli elementi dell'array associativo 'headerMenu' --}}
 						@foreach ($headerMenu as $key => $item)
-						<li class="px-3 py-4 debug"> 
+						<li class="{{ Route::currentRouteName() == $key ? 'active' : '' }}"> 
 							{{-- valore dell'href = al path definito nell'array in web.php  --}}
-							<a href="{{$item}}">{{$key}}</a>
+							<a href="{{$item}}" class="debug ms-4">{{$key}}</a>
 						 </li>
 						@endforeach
 					</ul>
