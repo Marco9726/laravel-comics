@@ -17,16 +17,16 @@ Route::get('/', function () {
 	$comics = config('comics');
 
 	$headerMenu = [
-		'CHARACTERS' => '/characters',
-		'COMICS' => '/comics',
-		'MOVIE' => '/movies',
-		'TV' => '/TV',
-		'GAMES' => '/games',
-		'COLLECTIBLES' => '/collectibles',
-		'VIDEOS' => '/videos',
-		'FANS' => '/fans',
-		'NEWS' => '/news',
-		'SHOP' => '/shop'
+		'characters' => '/characters',
+		'comics' => '/comics',
+		'movie' => '/movies',
+		'tv' => '/TV',
+		'games' => '/games',
+		'collectibles' => '/collectibles',
+		'videos' => '/videos',
+		'fans' => '/fans',
+		'news' => '/news',
+		'shop' => '/shop'
 	];
 
 	$footerLists = [
@@ -66,4 +66,4 @@ Route::get('/', function () {
 
 	];
 	return view('comics', compact('headerMenu', 'footerLists', 'comics'));
-})->name('COMICS');
+})->name('comics');
