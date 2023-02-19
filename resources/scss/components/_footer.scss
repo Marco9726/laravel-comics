@@ -5,6 +5,7 @@ footer {
 		height: 310px;
 		background-image: url('../../public/images/footer-bg.jpg');
 		background-size: cover;
+		overflow: hidden;
 
 		small {
 			color: $grey;
@@ -16,7 +17,14 @@ footer {
 			li {
 				line-height: 1rem;
 			}
+		}
 
+		.col-5 {
+			img {
+				position: relative;
+				width: 125%;
+				bottom: 20%;
+			}
 		}
 	}
 }

@@ -1,10 +1,10 @@
 <footer>
 	<div id="main-footer" class="py-4">
 		<div class="container-w60 h-100">
-			<div class="row h-100">
+			<div class="row justify-content-between h-100">
 				<div class="col-6 h-100">
 
-					<div id="lists" class="d-flex flex-column flex-wrap debug pt-2">
+					<div id="lists" class="d-flex flex-column flex-wrap pt-2">
 						{{-- foreach per ciclare le 4 liste dell'array associativo 'footerLists' --}}
 						@foreach ($footerLists as $key => $item)
 							<h5 class="font-pt mb-2 w-25">{{ $key }}</h5>
@@ -24,8 +24,8 @@
 					</div>
 				</div>
 
-				<div class="col-6">
-					<h1>LOGO</h1>
+				<div class="col-5">
+					<img src="{{Vite::asset('public/images/dc-logo-bg.png')}}" alt="dc-logo">
 				</div>
 			</div>
 		</div>

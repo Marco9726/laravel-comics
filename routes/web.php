@@ -12,8 +12,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-//HOME
+
+//ROTTA PER FILE COMICS
 Route::get('/', function () {
+	// salvo l'array del database in una variabile 
 	$comics = config('comics');
 
 	$headerMenu = [
@@ -67,3 +69,20 @@ Route::get('/', function () {
 	];
 	return view('comics', compact('headerMenu', 'footerLists', 'comics'));
 })->name('comics');
+
+//ROTTA PER FILE SINGLE-COMIC
+Route::get('/comics/{id}', function ($id) {
+	// salvo l'array del database in una variabile 
+	$comics = config('comics');
+	// $comic = array_filter($comics, function ($item) use ($param) {
+	// 	return $item['title'] == $param;
+	// });
+	$comic = '';
+	foreach ($comics as $key => $item) {
+		if ($key == $id) {
+			$comic = $item;
+		}
+	}
+
+	return view('single-comic', compact('comic'));
+})->name('single-comic');
