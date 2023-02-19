@@ -18,55 +18,10 @@ Route::get('/', function () {
 	// salvo l'array del database in una variabile 
 	$comics = config('comics');
 
-	$headerMenu = [
-		'characters' => '/characters',
-		'comics' => '/comics',
-		'movie' => '/movies',
-		'tv' => '/TV',
-		'games' => '/games',
-		'collectibles' => '/collectibles',
-		'videos' => '/videos',
-		'fans' => '/fans',
-		'news' => '/news',
-		'shop' => '/shop'
-	];
+	$headerMenu = config('headermenu');
 
-	$footerLists = [
-		'DC COMICS' => [
-			'Characters',
-			'Comics',
-			'Movies',
-			'TV',
-			'Games',
-			'Videos',
-			'News'
-		],
-		'SHOP' => [
-			'Shop DC',
-			'Shop DC Collectibles'
-		],
-		'DC' => [
-			'Tems Of Use',
-			'Privacy policy (New)',
-			'Ad Choices',
-			'Advertising',
-			'Jobs',
-			'Subscriptions',
-			'Talent Workshops',
-			'CPSC Certificates',
-			'Ratings',
-			'Shop Help',
-			'ContacsUs'
-		],
-		'SITES' => [
-			'DC',
-			'MAD Magazine',
-			'DC Kids',
-			'DC Universe',
-			'DC Power Visa'
-		]
+	$footerLists = config('footerlists');
 
-	];
 	return view('comics', compact('headerMenu', 'footerLists', 'comics'));
 })->name('comics');
 
@@ -74,15 +29,15 @@ Route::get('/', function () {
 Route::get('/comics/{id}', function ($id) {
 	// salvo l'array del database in una variabile 
 	$comics = config('comics');
-	// $comic = array_filter($comics, function ($item) use ($param) {
-	// 	return $item['title'] == $param;
-	// });
-	$comic = '';
-	foreach ($comics as $key => $item) {
-		if ($key == $id) {
-			$comic = $item;
-		}
-	}
 
-	return view('single-comic', compact('comic'));
-})->name('single-comic');
+	$headerMenu = config('headermenu');
+
+	$footerLists = config('footerlists');
+	// $comic = array_filter($comics, function ($item) use ($id) {
+	// 	return $item['title'] == $id;
+	// });
+	$comic = $comics[$id];
+
+	return view('single_comic', compact('comic', 'headerMenu', 'footerLists'));
+	dd($comic);
+})->name('single_comic');

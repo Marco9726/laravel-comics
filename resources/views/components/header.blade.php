@@ -9,7 +9,7 @@
 		<div class="container-w60 font-pt">
 			<div class="row align-items-center">
 				<div class="col-1" id="logo">
-					<a href="#">
+					<a href="/">
 						<img src="{{Vite::asset('public/images/dc-logo.png')}}" alt="dc-logo">
 					</a>
 				</div>

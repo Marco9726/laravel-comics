@@ -9,14 +9,14 @@
 		<h3 class="font-pt bg-my-primary text-center d-inline-block px-4">CURRENT SERIES</h3>
 		<div class="row justify-content-between flex-wrap">
 			{{-- ciclo i comics dall'array passato da web.php  --}}
-		@foreach ($comics as $comic)
+		@foreach ($comics as $key => $comic)
 			<div class="comic-card mb-4">
 				<div class="comic-img mb-3">
-					<a href="#">
+					<a href="{{ route('single_comic', ['id' => $key])}}">
 						<img class="img-fluid" src="{{ $comic['thumb'] }}" alt="{{ $comic['thumb'] }}">
 					</a>
 				</div>
-				<a href="#" class="text-white">{{ Str::upper( $comic['series']) }}</a>
+				<a href="{{ route('single_comic', ['id' => $key])}}" class="text-white">{{ Str::upper( $comic['series']) }}</a>
 			</div>
 		@endforeach
 		</div>
