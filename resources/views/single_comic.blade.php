@@ -12,6 +12,7 @@
 		</div>
 	</div>
 </div>
+{{-- PRIMA SECTION --}}
 <section id="comic-info" class="py-5">
 	<div class="container w-50">
 		<div class="row justify-content-between">
@@ -41,5 +42,54 @@
 		</div>
 	</div>
 </section>
-
+{{-- SECONDA SECTION --}}
+<section id="comic-details" class="pt-3">
+	<div class="container w-50">
+		<div class="row justify-content-between">
+			{{-- LEFT --}}
+			<div class="col-left">
+				<h6 class="font-pt">Talent</h6>
+				<div class="details">
+					<div class="row m-0">
+						<div class="col-4">Art by:</div>
+						<div class="col-8">
+							{{-- foreach per ciclare gli artisti  --}}
+							@foreach ($comic['artists'] as $artist)
+								<a href="#" class="lightblue">{{ $artist }}</a>
+							@endforeach
+						</div>
+					</div>
+					<div class="row m-0">
+						<div class="col-4">Written by:</div>
+						<div class="col-8">
+							{{-- foreach per ciclare gli scrittori  --}}
+							@foreach ($comic['writers'] as $writers)
+								<a href="#" class="lightblue">{{ $writers }}</a>
+							@endforeach
+						</div>
+					</div>
+				</div>
+			</div>
+			{{-- RIGHT --}}
+			<div class="col-right">
+				<h6 class="font-pt">Specs</h6>
+				<div class="details">
+					<div class="row m-0">
+						<div class="col-4">Series:</div>
+						<div class="col-8 lightblue">{{ Str::upper($comic['series']) }}</div>
+					</div>
+					<div class="row m-0">
+						<div class="col-4">U.S. Price:</div>
+						<div class="col-8">{{ $comic['price'] }}</div>
+					</div>
+					<div class="row m-0">
+						<div class="col-4">On Sale Date:</div>
+						{{-- richiamo funzione per cambiare il formato della data --}}
+						<div class="col-8">{{ changeDate($comic) }}</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 @endsection

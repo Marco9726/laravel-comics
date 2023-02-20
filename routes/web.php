@@ -37,7 +37,14 @@ Route::get('/comics/{id}', function ($id) {
 	// 	return $item['title'] == $id;
 	// });
 	$comic = $comics[$id];
+	$date = '';
+	// funzione per trasformare il formato della data tramite carbon 
+	function changeDate($saleDate)
+	{
+		$date = $saleDate['sale_date'];
+		return \Carbon\Carbon::createFromFormat('Y-m-d', $date)->format('M d Y');
+	}
 
-	return view('single_comic', compact('comic', 'headerMenu', 'footerLists'));
+	return view('single_comic', compact('comic', 'headerMenu', 'footerLists', 'date'));
 	dd($comic);
 })->name('single_comic');
