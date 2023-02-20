@@ -20,7 +20,7 @@
 						@foreach ($headerMenu as $key => $item)
 						<li class="{{ Route::currentRouteName() == $key ? 'active' : '' }}"> 
 							{{-- valore dell'href = al path definito nell'array in web.php  --}}
-							<a href="{{$item}}" class="font-pt">{{ Str::upper($key)}}</a>
+							<a href="{{ route('nav_item', $item)}}" class="font-pt">{{ Str::upper($key)}}</a>
 						 </li>
 						@endforeach
 					</ul>

@@ -3,7 +3,7 @@
 return [
 	'characters' => '/characters',
 	'comics' => '/',
-	'movie' => '/movies',
+	'movies' => '/movies',
 	'tv' => '/TV',
 	'games' => '/games',
 	'collectibles' => '/collectibles',

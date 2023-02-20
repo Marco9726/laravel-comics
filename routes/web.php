@@ -52,5 +52,17 @@ Route::get('/comics/{id}', function ($id) {
 	}
 
 	return view('single_comic', compact('comic', 'headerMenu', 'footerLists', 'date', 'socialArray'));
-	dd($comic);
 })->name('single_comic');
+
+//ROTTA PER LE PAGE DELLA NAVBAR
+Route::get('/{item}', function ($item) {
+	$headerMenu = config('headermenu');
+
+	$li = $headerMenu[$item];
+
+	$footerLists = config('footerlists');
+
+	$socialArray = config('social');
+
+	return view('nav_item', compact('headerMenu', 'footerLists', 'socialArray', 'li'));
+})->name('nav_item');
