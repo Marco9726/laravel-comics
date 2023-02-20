@@ -27,4 +27,28 @@ footer {
 			}
 		}
 	}
+
+	#last-section {
+		background-color: rgb(45, 45, 45);
+
+		#button {
+			font-size: 1rem;
+
+			button {
+				border: 1.5px solid $brand-primary;
+				background-color: rgb(45, 45, 45);
+				color: white;
+			}
+		}
+
+		#social {
+			h5 {
+				color: $brand-primary;
+			}
+
+			img {
+				height: 2rem;
+			}
+		}
+	}
 }
