@@ -27,3 +27,51 @@
 		}
 	}
 }
+
+#comic-info {
+	.row {
+		.col-left {
+			width: 66%;
+
+			h3 {
+				color: black;
+			}
+
+			#shop-info {
+				font-weight: 600;
+				background-color: rgb(63, 205, 87);
+				color: white;
+				border-bottom: .5px solid black;
+
+				span {
+					display: inline-block;
+				}
+
+				span.lightgreen {
+					color: rgb(181, 247, 193)
+				}
+
+				.col-4 {
+					border-left: .5px solid black;
+				}
+			}
+
+			p {
+				color: rgb(126, 126, 126);
+			}
+		}
+
+		.col-right {
+			width: 30%;
+			position: relative;
+
+			h6 {
+				position: absolute;
+				bottom: 100%;
+				right: 0;
+				font-weight: 600;
+				color: rgb(94, 93, 93);
+			}
+		}
+	}
+}

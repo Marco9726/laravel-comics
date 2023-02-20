@@ -1,14 +1,15 @@
 <header>
 	<div id="top-bar" class="bg-my-primary">
-		<div class="container-w60 text-end text-white font-mukta">
+		<div class="container-w60 text-end text-white">
 			<small> DC POWER VISA &#174;</small>
 			<small class="ms-5"> ADDITIONAL DC SITES &#x25BE;</small>
 		</div>
 	</div>
 	<div id="main-header">
-		<div class="container-w60 font-pt">
+		<div class="container-w60">
 			<div class="row align-items-center">
 				<div class="col-1" id="logo">
+					{{-- logo --}}
 					<a href="/">
 						<img src="{{Vite::asset('public/images/dc-logo.png')}}" alt="dc-logo">
 					</a>
@@ -19,14 +20,14 @@
 						@foreach ($headerMenu as $key => $item)
 						<li class="{{ Route::currentRouteName() == $key ? 'active' : '' }}"> 
 							{{-- valore dell'href = al path definito nell'array in web.php  --}}
-							<a href="{{$item}}">{{ Str::upper($key)}}</a>
+							<a href="{{$item}}" class="font-pt">{{ Str::upper($key)}}</a>
 						 </li>
 						@endforeach
 					</ul>
 				</nav>
 				<div class="col-2 p-0 d-flex justify-content-end">
 					<div id="searchbar" class="w-75">
-						<input type="search" placeholder="Search">
+						<input type="search" placeholder="Search" class="font-pt">
 						<i class="fa-solid fa-magnifying-glass"></i>
 					</div>
 				</div>
