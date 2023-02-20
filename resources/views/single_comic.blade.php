@@ -19,7 +19,7 @@
 			{{-- col-left --}}
 			<div class="col-left p-0">
 				{{-- title --}}
-				<h3 class="font-pt mb-3">{{ Str::upper( $comic['title']) }}</h3>
+				<h3 class="mb-3">{{ Str::upper( $comic['title']) }}</h3>
 				{{-- info --}}
 				<div id="shop-info" class="d-flex mb-2">
 					<div class="col col-8 px-4 py-2 d-flex ">
@@ -37,7 +37,7 @@
 			{{-- col-right --}}
 			<div class="col-right p-0">
 				<img src="{{Vite::asset('public/images/adv.jpg')}}" alt="ADV" class="img-fluid">
-				<h6 class="font-pt m-0">ADVERTISIMENT</h6>
+				<h6 class="m-0">ADVERTISIMENT</h6>
 			</div>
 		</div>
 	</div>
@@ -48,7 +48,7 @@
 		<div class="row justify-content-between">
 			{{-- LEFT --}}
 			<div class="col-left">
-				<h6 class="font-pt">Talent</h6>
+				<h6>Talent</h6>
 				<div class="details">
 					<div class="row m-0">
 						<div class="col-4">Art by:</div>
@@ -72,7 +72,7 @@
 			</div>
 			{{-- RIGHT --}}
 			<div class="col-right">
-				<h6 class="font-pt">Specs</h6>
+				<h6>Specs</h6>
 				<div class="details">
 					<div class="row m-0">
 						<div class="col-4">Series:</div>
@@ -88,6 +88,25 @@
 						<div class="col-8">{{ changeDate($comic) }}</div>
 					</div>
 				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{{-- NAVBAR --}}
+<section id="navbar">
+	<div class="container w-50">
+		<div class="row">
+			<div class="col-3">
+				<h6>DIGITAL COMICS</h6>
+			</div>
+			<div class="col-3">
+				<h6>SHOP DC</h6>
+			</div>
+			<div class="col-3">
+				<h6>COMIC SHOP LOCATOR</h6>
+			</div>
+			<div class="col-3">
+				<h6>SUBSCRIPTIONS</h6>
 			</div>
 		</div>
 	</div>

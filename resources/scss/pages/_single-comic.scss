@@ -115,12 +115,30 @@
 							color: black;
 						}
 					}
-
 				}
 			}
-
 		}
+	}
+}
 
+// navbar
+#navbar {
+	background-color: rgb(245, 245, 245);
 
+	.row {
+		.col-3 {
+			padding: 1rem;
+			border-right: $grey-05-px;
+			cursor: pointer;
+
+			&:first-child {
+				border-left: $grey-05-px;
+			}
+
+			h6 {
+				color: rgb(159, 159, 159);
+				font-size: .8rem;
+			}
+		}
 	}
 }

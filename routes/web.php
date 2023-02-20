@@ -22,7 +22,10 @@ Route::get('/', function () {
 
 	$footerLists = config('footerlists');
 
-	return view('comics', compact('headerMenu', 'footerLists', 'comics'));
+	$socialArray = config('social');
+
+
+	return view('comics', compact('headerMenu', 'footerLists', 'comics', 'socialArray'));
 })->name('comics');
 
 //ROTTA PER FILE SINGLE-COMIC
@@ -37,6 +40,9 @@ Route::get('/comics/{id}', function ($id) {
 	// 	return $item['title'] == $id;
 	// });
 	$comic = $comics[$id];
+
+	$socialArray = config('social');
+
 	$date = '';
 	// funzione per trasformare il formato della data tramite carbon 
 	function changeDate($saleDate)
@@ -45,6 +51,6 @@ Route::get('/comics/{id}', function ($id) {
 		return \Carbon\Carbon::createFromFormat('Y-m-d', $date)->format('M d Y');
 	}
 
-	return view('single_comic', compact('comic', 'headerMenu', 'footerLists', 'date'));
+	return view('single_comic', compact('comic', 'headerMenu', 'footerLists', 'date', 'socialArray'));
 	dd($comic);
 })->name('single_comic');
