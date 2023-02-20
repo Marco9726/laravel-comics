@@ -1,0 +1,29 @@
+#blue-bg {
+	position: relative;
+	height: 4rem;
+
+	.poster {
+		position: absolute;
+		bottom: 1rem;
+		height: 220px;
+		border: 1px solid white;
+
+		small {
+			background-color: rgb(80, 188, 212);
+			color: white;
+			position: absolute;
+			text-align: center;
+
+			&.label-top {
+				top: 0;
+				left: 0;
+			}
+
+			&.label-bottom {
+				width: 100%;
+				bottom: 0;
+				left: 0;
+			}
+		}
+	}
+}

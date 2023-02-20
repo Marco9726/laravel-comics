@@ -2,6 +2,8 @@
 @use './components/jumbotron' as *;
 @use './components/footer' as *;
 
+@use './pages/single-comic' as *;
+
 @import '~bootstrap/scss/bootstrap';
 @import './partials/variables';
 
