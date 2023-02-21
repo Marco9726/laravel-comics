@@ -18,7 +18,7 @@
 					<ul class="d-flex justify-content-between mb-0 gap-4">
 						{{-- foreach per ciclare gli elementi dell'array associativo 'headerMenu' --}}
 						@foreach ($headerMenu as $key => $item)
-						<li class="{{ Route::currentRouteName() == $key ? 'active' : '' }}"> 
+						<li class="{{ (request()->is($key)) ? 'active' : '' }}"> 
 							{{-- valore dell'href = al path definito nell'array in web.php  --}}
 							<a href="{{ route('nav_item', $item)}}" class="font-pt">{{ Str::upper($key)}}</a>
 						 </li>
